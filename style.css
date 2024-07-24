@@ -85,7 +85,135 @@ header {
 
 /*Login Container*/
 
-.icon-img {
-    width: 20;
-    height: 19;
+.input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box .icon-img {
+    position: absolute;
+    right: 8px;
+    width: 20px; 
+    height: 20px;
+}
+
+.input-box input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-right: 30px;
+}
+
+.input-box ::placeholder {
+    color:#fff;
+}
+
+.btn-login {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: black;
+    outline: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+
+
+.wrapper-login {
+    position: relative;
+    width: 	400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayNone {
+    display: none;
+}
+
+.wrapper-register {
+    position: relative;
+    width: 	400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/*Register-Page/Container*/
+
+.btn-register {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: black;
+    outline: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
 }

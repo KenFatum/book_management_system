@@ -18,21 +18,50 @@
         </nav>
     </header>
 
-    <div class="wrapper">
+    <div class="wrapper-login">
         <div class="form-box login">
             <h2>Login</h2>
             <form action="#">
                 <div class="input-box">
-                    <span class="icon"><img src="images/email.png"></span>
-                    <input type="email" required>
-                    <label>Email</label>
+                    <img class="icon-img" src="images/email.png">
+                    <input type="email" placeholder="E-Mail">
                 </div>
                 <div class="input-box">
-                    <span class="icon"><img class="icon-img" src="images/password.png"></span>
-                    <input type="password" required>
-                    <label>Password</label>
+                    <img class="icon-img" src="images/password.png">
+                    <input type="password" placeholder="Password" required>
                 </div>
+                <button type="submit" class="btn-login">Login</button>
+                <div class="register">
+                    <p>Don't have an Account? 
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <div class="wrapper-register hidden">
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <img class="icon-img" src="images/profil.png">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <img class="icon-img" src="images/email.png">
+                    <input type="email" placeholder="E-Mail">
+                </div>
+                <div class="input-box">
+                    <img class="icon-img" src="images/password.png">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-register">Register</button>
+                <div class="login">
+                    <p>Already have an Account. 
+                        <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
             </form>
         </div>
     </div>
