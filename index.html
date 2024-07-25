@@ -45,18 +45,14 @@
             <h2>Register</h2>
             <form action="#">
                 <div class="input-box">
-                    <img class="icon-img" src="images/profil.png">
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="input-box">
                     <img class="icon-img" src="images/email.png">
-                    <input type="email" placeholder="E-Mail">
+                    <input type="email" placeholder="E-Mail" class="input-email" required>
                 </div>
                 <div class="input-box">
                     <img class="icon-img" src="images/password.png">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" class="input-password" required>
                 </div>
-                <button type="submit" class="btn-register">Register</button>
+                <button type="submit" class="btn-register" onclick="registerUser()">Register</button>
                 <div class="login">
                     <p>Already have an Account. 
                         <a href="#" class="login-link">Login</a>
