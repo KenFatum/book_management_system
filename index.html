@@ -24,13 +24,13 @@
             <form action="#">
                 <div class="input-box">
                     <img class="icon-img" src="images/email.png">
-                    <input type="email" placeholder="E-Mail">
+                    <input type="email" placeholder="E-Mail" class="input-email" required>
                 </div>
                 <div class="input-box">
                     <img class="icon-img" src="images/password.png">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" class="input-email" required>
                 </div>
-                <button type="submit" class="btn-login">Login</button>
+                <button type="submit" class="btn-login" onclick="loginUser()">Login</button>
                 <div class="register">
                     <p>Don't have an Account? 
                         <a href="#" class="register-link">Register</a>

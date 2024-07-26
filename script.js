@@ -33,6 +33,39 @@ async function hashPassword(password) {
     return hashedPassword;
 }
 
+function postEmailPassword(userData) {
+    const apiEndpoint = 'http://localhost:3001/register';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData)
+    }
+
+    fetch(apiEndpoint, options)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Netzwerkantwort war nicht ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Formular zurücksetzen
+        document.querySelector('.wrapper-register form').reset();
+
+        //Ausblenden von Register-Form und einblenden von Login-Form
+        // wrapperRegister.classList.add("hidden");
+        // wrapperLogin.classList.remove("hidden");
+
+        console.log('Registrierung erfolgreich:', data);
+    })
+    .catch((error) => {
+        console.error('Fehler bei der Registrierung:', error);
+        alert('Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.');
+    });
+}
+
 //Funktion zur Registierung
 async function registerUser() {
     const registerEmail = document.querySelector('.wrapper-register input[class="input-email"]').value;
@@ -51,30 +84,16 @@ async function registerUser() {
         password: hashedPassword
     };
 
-    const apiEndpoint = 'http://localhost:3001/register';
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData)
+    postEmailPassword(userData);
+}
+
+async function loginUser() {
+    const loginEmail = document.querySelector('.wrapper-login input[class="input-email"]').value;
+    const loginPassword = document.querySelector('.wrapper-login input[class="input-password"]').value;
+
+    if (!isValid(loginEmail, loginPassword)) {
+        return;
     }
 
-    fetch(apiEndpoint, options)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Netzwerkantwort war nicht ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Registrierung erfolgreich:', data);
-        alert('Registrierung erfolgreich!');
-        // Formular zurücksetzen
-        document.querySelector('.wrapper-register form').reset();
-    })
-    .catch((error) => {
-        console.error('Fehler bei der Registrierung:', error);
-        alert('Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.');
-    });
+    const apiEndpoint = 'http://localhost:3001/login'; 
 }
